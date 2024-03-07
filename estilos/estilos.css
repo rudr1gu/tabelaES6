@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 50vw;
+}
+
+thead{
+    font-weight: bolder;
+}
+
+tr, td{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.466);
+    text-align: center;
+}
