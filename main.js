@@ -1,34 +1,12 @@
 import { Clubes } from "./modules/timesData.mjs";
-
-let ordemPontos = () => {
-    Clubes.sort(function (a, b) {
-      if (a.pontos < b.pontos) {
-        return 1;
-      }
-      if (a.pontos > b.pontos) {
-        return -1;
-      }
-      
-      return 0;
-    })
-}
-
-let ordemGols = () => {
-  Clubes.sort(function (a, b) {
-    if (a.gp < b.gp) {
-      return 1;
-    }
-    if (a.gp > b.gp) {
-      return -1;
-    }
-    
-    return 0;
-  })
-}
+import { ordemGols, ordemPontos, ordemNome, ordemVitoria, ordemDerrota } from "./modules/ordem.mjs";
 
 const btnPontos = document.getElementById("btnPontos");
 const btnGols = document.getElementById("btnGols");
-let res = document.getElementById("dadosTime")
+const btnNome = document.getElementById("btnNome");
+const btnVitoria = document.getElementById("btnVitoria");
+const btnDerrota = document.getElementById("btnDerrota");
+ let res = document.getElementById("dadosTime")
 
 btnPontos.addEventListener("click", () => {
   ordemPontos()
@@ -42,12 +20,31 @@ btnGols.addEventListener("click", () => {
   console.log("funcionou")
 });
 
+btnNome.addEventListener("click", () => {
+  ordemNome()
+  gerarTabela()
+  console.log("funcionou")
+});
+
+btnVitoria.addEventListener("click", () => {
+  ordemVitoria()
+  gerarTabela()
+  console.log("funcionou")
+});
+
+btnDerrota.addEventListener("click", () => {
+  ordemDerrota()
+  gerarTabela()
+  console.log("funcionou")
+});
+
+
 let gerarTabela = () =>{
   res.innerHTML = ""
 
   let i;
 
-  for(i = 0; i <= Clubes.length; i++){
+  for(i = 0; i < Clubes.length; i++){
       res.innerHTML += `<tr>
                               <td>${i+1}</td>
                               <td>${Clubes[i].nome}</td>
