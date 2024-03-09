@@ -81,19 +81,21 @@ p{color: var(--corText1);}
     width: 75vw;
     border: 2px solid var(--cor1);
     border-radius: 20px;
-    padding: 40px;
+    padding: 10px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.644);
+    overflow-x: auto;
 }
 
 table{
     border: 1px solid black;
     border-collapse: collapse;
     width: 50vw;
-    font-size: 1.2em;
+    font-size: 1em;
+    
     
 }
 caption{
-    font-size: 2em;
+    font-size: 1em;
     margin-bottom: 10px;
     color: var(--corText2);
     text-shadow:2px 2px  #083359;
@@ -114,6 +116,26 @@ td{
 }
 
 tr:hover{
-    background-color: silver;
+    background-color: var(--corBackground);
     cursor: pointer;
+}
+
+@media (max-width:550px) {
+    #bTable{
+        width: 90vw;
+    }
+
+    #btns{
+        width: 90vw;
+    }
+    
+    table{
+        font-size: 0.7em;
+    }
+    #btns>button{
+        padding: 3px;
+        font-size: 0.7em;
+        width: 75px;
+    }
+    
 }
