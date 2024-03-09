@@ -28,6 +28,55 @@ body{
 
 }
 
+header{
+    position: fixed;
+    top:0;
+    width: 75vw;
+    display: flex;
+    flex-direction: row;  
+    border-radius: 20px;
+    margin-top: 10px;
+    height: 70px;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5px;
+    width: 75vw;
+}
+
+.btnsNav{
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.btnsNav>button{
+    width: 10vw;
+    cursor: pointer;
+    margin: 0;
+    padding: 5px;
+    border: 1px solid var(--cor1);
+    background-color: var(--corDiv);
+    color: var(--corText1);
+    font-size: 1.5em;
+    border-radius: 10px;
+   
+}
+
+.btnsNav:hover{
+    border: 5px solid var(--cor1) ;
+    transition: 500ms;
+}
+
+.btnsNav>button:hover{
+  
+    color: var(--corText2);
+    border: none;
+    transition: 500ms;
+}
+
 #btns{
     position: fixed;
     bottom: 0;
@@ -137,5 +186,11 @@ tr:hover{
         font-size: 0.7em;
         width: 75px;
     }
-    
+    header{
+        overflow-x: auto;
+    }   
+
+    .btnsNav>button{
+        font-size: 1em;
+    }
 }
